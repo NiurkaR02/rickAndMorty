@@ -35,7 +35,9 @@ export default function Residents() {
             <div className="content">
               <img src={post.image} alt={`Imagen de ${post.name}`}/>
               <h1 className="m-2">{post.name}</h1>
-              <p>{post.status}</p>
+              <p>status: {post.status || 'unknown'}</p>
+              <p>specie: {post.species || 'unknown'}</p>
+              <p>type: {post.type || 'unknown'}</p>
             </div>
           </div>
         </div>
