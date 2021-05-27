@@ -2,7 +2,7 @@ import React from 'react'
 import { Nav } from 'react-bootstrap'
 
 const Header = () => (
-    <Nav activeKey="/">
+    <Nav className="justify-content-center" activeKey="/">
       <Nav.Item>
         <Nav.Link href="/">Home</Nav.Link>
       </Nav.Item>
