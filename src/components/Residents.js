@@ -21,7 +21,7 @@ const getLocation = gql`
 
 export default function Residents() {
   const { id } = useParams()
-  const { loading, data, error } = useQuery(getLocation, { variables: { id }} )
+  const { loading, data, error } = useQuery(getLocation, { variables: { id }, fetchPolicy: "network-only"} )
   if (loading) return (<Skeleton/>)
   if (error) return `Error: ${error}`
   

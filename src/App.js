@@ -16,7 +16,7 @@ query getCharacters {
 `
 
 function App() {
-  const { loading, data, error } = useQuery(getCharacters)
+  const { loading, data, error } = useQuery(getCharacters, { fetchPolicy: "network-only" })
   if (loading) return (<Skeleton />)
   if (error) return `Error: ${error}`
 

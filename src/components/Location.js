@@ -34,7 +34,7 @@ function Locations() {
     dimension: ''
   })
 
-  const { loading, data, error } = useQuery(getLocation, { variables: { page: activePage, filter }} )
+  const { loading, data, error } = useQuery(getLocation, { variables: { page: activePage, filter }, fetchPolicy: "network-only"  })
 
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
