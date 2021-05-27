@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { gql, useQuery } from '@apollo/client';
 import Skeleton from './Skeleton/skeleton'
 import Pagination from "react-js-pagination";
+import { Link } from 'react-router-dom'
 
 const getLocation = gql`
   query getLocations($page: Int)  {
@@ -63,6 +64,9 @@ function Locations() {
                   <div className="col">
                     <h3>Dimension: </h3>
                     <label>{result.dimension}</label>
+                  </div>
+                  <div className="col">
+                    <Link to={`/residents/${result.id}`}>Residents</Link>
                   </div>
                 </div>
               </div>
