@@ -57,21 +57,18 @@ function Locations() {
             <Dropdown
               data={data && data}
               setFilter={setFilter}
-              filter={filter}
               title="Name"
               type="name"
             />
             <Dropdown
               data={data && data}
               setFilter={setFilter}
-              filter={filter}
               title="Type"
               type="type"
             />
             <Dropdown
               data={data && data}
               setFilter={setFilter}
-              filter={filter}
               title="Dimension"
               type="dimension"
             />

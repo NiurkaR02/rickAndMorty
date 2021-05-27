@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-const Dropdowns = ({ data, setFilter, filter, title, type }) => {
+const Dropdowns = ({ data, setFilter, title, type }) => {
     const [originalData, setOriginalData] = useState([])
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const Dropdowns = ({ data, setFilter, filter, title, type }) => {
                 originalData.map(result => (
                     <Dropdown.Item
                         eventKey={result[type]}
-                        onSelect={e => setFilter({ ...filter, name: e })}
+                        onSelect={e => setFilter({ [type]: e })}
                         >
                         {result[type]}
                     </Dropdown.Item>
